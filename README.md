@@ -32,4 +32,10 @@ Here's a quick overview:
 - `R`: `are`, or `am`, or `is` depending on starting word
 - et cetera
 
-I will also soon merge this with a similar system that uses the same ending words.
+
+These ending words can also be combined with other things:
+
+**alternate starting words (with no middle words)**
+- `WHAE`: `what he`
+- `WHAU`: `what you`
+- `WHAEU`: `what I`

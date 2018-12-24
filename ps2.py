@@ -38,6 +38,10 @@ middles = { 	"A":"really",
 		"AOEU":"don't even",
 		"":""}
 
+what = {	"WHAE":"what he",
+		"WHAU":"what you",
+		"WHAEU":"what I"}
+
 ends = {	"PB":"know",
 		"PBT":"know that",
 		"PBTS":"knows that",
@@ -122,6 +126,10 @@ ends = {	"PB":"know",
 def lookup(key):
 	assert len(key) <= LONGEST_KEY
 
+	# This is the one and only collision in the main dictionary.
+	# Save the whales!
+	if key[0] == "WHAEUL": return "whale"
+
 	ks = ""
 	km = ""
 	ke = "*" if ("*" in key[0]) else ""
@@ -136,18 +144,22 @@ def lookup(key):
 		if c == 2:
 			ke += i
 
-	if not ks in starters: raise KeyError
-	if not km in middles: raise KeyError
+	if ks+km in what:
+		stw = what[ks+km]
+	else:
+		if not ks in starters: raise KeyError
+		if not km in middles: raise KeyError
+		stw =  starters[ks] + " " + middles[km]
 
 	# -R special casing
 	if ke != "R" and ke != "RT":
 		if not ke in ends: raise KeyError
-		ret = starters[ks] + " " + middles[km] + " " + ends[ke]
+		ret = stw + " " + ends[ke]
 	else:
 		if ke == "R":
-			ret = starters[ks] + " " + middles[km] + " " + __are[ks]
+			ret = stw + " " + __are[ks]
 		else:
-			ret = starters[ks] + " " + middles[km] + " " + __are[ks] + " not"
+			ret = stw + " " + __are[ks] + " not"
 
 	if ret == "  ": raise KeyError
 
