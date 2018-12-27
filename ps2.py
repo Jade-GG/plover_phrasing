@@ -6,19 +6,20 @@ starters = {	"SWR":"I",
 		"SKWHR":"she",
 		"TWH":"they",
 		"TWR":"we",
-		"TKWH":"it",
-		"PWH":"",
-		"SPWH":""}
+		"KPWH":"it",
+		"STKPWHR":""}
 
 __are = {	"SWR":"am",
 		"KPWR":"are",
 		"KWHR":"is",
 		"SKWHR":"is",
 		"TWH":"are",
-		"TWR":"are",
-		"TKWH":"is",
-		"PWH":"are",
-		"SPWH":"is"}
+		"KPWH":"is",
+		"STKPWHR":"are",
+
+		"WHAE":"is",
+		"WHAU":"are",
+		"WHAEU":"am"}
 
 
 middles = { 	"A":"really",
@@ -59,7 +60,7 @@ ends = {	"PB":"know",
 		"*RPLT":"remember the",
 		"*RPLTS":"remembers the",
 		"BG":"can",
-                "BGT":"can't",
+		"BGT":"can't",
 		"BGD":"could",
 		"BL":"believe",
 		"D":"had",
@@ -89,21 +90,21 @@ ends = {	"PB":"know",
 		"RPBD":"understand",
 		"*RPBD":"understood",
 		"PBD":"need",
-                "PBTD":"need to",
-                "PBTSD":"needs to",
-                "*PBTD":"need the",
-                "*PBTSD":"needs the",
+		"PBTD":"need to",
+		"PBTSD":"needs to",
+		"*PBTD":"need the",
+		"*PBTSD":"needs the",
 		"FL":"feel",
-                "FLG":"feel like",
+		"FLG":"feel like",
 		"FLT":"felt",
-                "FLGT":"felt like",
+		"FLGT":"felt like",
 		"PBL":"mean",
 		"PBLT":"meant",
 		"BLG":"like",
-                "BLGT":"like to",
-                "BLGTS":"likes to",
-                "*BLGT":"like the",
-                "*BLGTS":"likes the",
+		"BLGT":"like to",
+		"BLGTS":"likes to",
+		"*BLGT":"like the",
+		"*BLGTS":"likes the",
 		"LG":"love",
 		"LGT":"love to",
 		"LGTS":"loves to",
@@ -114,13 +115,13 @@ ends = {	"PB":"know",
 		"RBGTS":"cares about",
 		"GT":"get",
 		"*GT":"got",
-                "PLD":"mind",
-                "FG":"forget",
-                "FGT":"forgot",
-                "FRB":"wish",
-                "PGT":"expect",
-                "FPB":"even",
-                "PBLG":"just",
+		"PLD":"mind",
+		"FG":"forget",
+		"FGT":"forgot",
+		"FRB":"wish",
+		"PGT":"expect",
+		"FPB":"even",
+		"PBLG":"just",
 		"":""}
 
 def lookup(key):
@@ -145,22 +146,25 @@ def lookup(key):
 			ke += i
 
 	if ks+km in what:
-		stw = what[ks+km]
+		ks = ks+km
+		stw = what[ks]
 	else:
 		if not ks in starters: raise KeyError
 		if not km in middles: raise KeyError
 		stw =  starters[ks] + " " + middles[km]
 
 	# -R special casing
-	if ke != "R" and ke != "RT":
+	if not ke in ["R", "RT", "*RT"]:
 		if not ke in ends: raise KeyError
 		ret = stw + " " + ends[ke]
 	else:
 		if ke == "R":
 			ret = stw + " " + __are[ks]
-		else:
+		elif ke == "RT":
 			ret = stw + " " + __are[ks] + " not"
+		elif ke == "*RT":
+			ret = stw + " " + __are[ks] + "n't"
 
-	if ret == "  ": raise KeyError
+	if ret in ["  "," ",""]: raise KeyError
 
 	return " ".join(ret.split())

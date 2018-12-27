@@ -13,7 +13,8 @@ Here's a quick overview:
 - `SKWHR`: `she`
 - `TWH`: `they`
 - `TWR`: `we`
-- `TKWH`: `it`
+- `KPWH`: `it`
+- `STKPWHR`: `` (nothing)
 
 **Middle words**  
 - `OE`: `don't` (`AOE` makes `really don't`, `OEU` makes `don't really`)
