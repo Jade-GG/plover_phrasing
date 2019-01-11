@@ -14,9 +14,9 @@ __are = {	"SWR":"am",
 		"KWHR":"is",
 		"SKWHR":"is",
 		"TWH":"are",
+		"TWR":"are",
 		"KPWH":"is",
 		"STKPWHR":"are",
-
 		"WHAE":"is",
 		"WHAU":"are",
 		"WHAEU":"am"}
