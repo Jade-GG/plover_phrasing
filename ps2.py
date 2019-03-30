@@ -19,7 +19,28 @@ __are = {	"SWR":"am",
 		"STKPWHR":"are",
 		"WHAE":"is",
 		"WHAU":"are",
-		"WHAEU":"am"}
+		"WHAEU":"am",
+
+		"SKPWE":"is",
+		"SKPWU":"are",
+		"SKPWEU":"am",
+
+		"STKOE":"is",
+		"STKOU":"are",
+		"STKOEU":"am",
+
+		"STKPWOE":"is",
+		"STKPWOU":"are",
+		"STKPWOEU":"am",
+
+		"STHAE":"is",
+		"STHAU":"are",
+		"STHAEU":"am",
+		
+		"STPAE":"is",
+		"STPAU":"are",
+		"STPAEU":"am"
+		}
 
 
 middles = { 	"A":"really",
@@ -39,9 +60,35 @@ middles = { 	"A":"really",
 		"AOEU":"don't even",
 		"":""}
 
+
+
+
 what = {	"WHAE":"what he",
 		"WHAU":"what you",
-		"WHAEU":"what I"}
+		"WHAEU":"what I",
+
+                "SKPWE":"doesn't he",
+                "SKPWU":"don't you",
+                "SKPWEU":"don't I",
+                
+                "STKOE":"does he",
+                "STKOU":"do you",
+                "STKOEU":"do I",
+
+                "STKPWOE":"did he",
+                "STKPWOU":"did you",
+                "STKPWOEU":"did I",
+
+                "STHAE":"that he",
+                "STHAU":"that you",
+                "STHAEU":"that I",
+
+                "STPAE":"if he",
+                "STPAU":"if you",
+                "STPAEU":"if I"}
+
+
+
 
 ends = {	"PB":"know",
 		"PBT":"know that",
@@ -88,7 +135,8 @@ ends = {	"PB":"know",
 		"PL":"may",
 		"PLT":"might",
 		#"R":"are", # special case this one
-		#"RT":"are not" # also special case this
+		#"RT":"are not", # also special case this
+		#"*RT":"aren't", # and this one
 		"RB":"shall",
 		"RBD":"should",
 		"RL":"recall",
@@ -115,7 +163,7 @@ ends = {	"PB":"know",
 		"LGT":"love to",
 		"LGTS":"loves to",
 		"*LGT":"love the",
-		"*LGT":"loves the",
+		"*LGTS":"loves the",
 		"RBG":"care",
 		"RBGT":"care about",
 		"RBGTS":"cares about",

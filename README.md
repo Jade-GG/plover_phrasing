@@ -37,6 +37,9 @@ Here's a quick overview:
 These ending words can also be combined with other things:
 
 **alternate starting words (with no middle words)**
-- `WHAE`: `what he`
-- `WHAU`: `what you`
-- `WHAEU`: `what I`
+- `WHA[E/U/EU]`: `what he/you/I`
+- `SKPW[E/U/EU]`: `do(es)n't he/you/I`
+- `STKO[E/U/EU]`: `do(es) he/you/I`
+- `STKPWO[E/U/EU]`: `did he/you/I`
+- `STHA[E/U/EU]`: `that he/you/I`
+- `STPA[E/U/EU]`: `if he/you/I`
