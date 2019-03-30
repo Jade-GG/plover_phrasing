@@ -39,7 +39,11 @@ __are = {	"SWR":"am",
 		
 		"STPAE":"is",
 		"STPAU":"are",
-		"STPAEU":"am"
+		"STPAEU":"am",
+
+		"SWHE":"is",
+		"SWHU":"are",
+		"SWHEU":"am"
 		}
 
 
@@ -85,7 +89,11 @@ what = {	"WHAE":"what he",
 
                 "STPAE":"if he",
                 "STPAU":"if you",
-                "STPAEU":"if I"}
+                "STPAEU":"if I",
+		
+		"SWHE":"when he",
+		"SWHU":"when you",
+		"SWHEU":"when I"}
 
 
 
