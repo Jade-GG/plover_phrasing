@@ -217,10 +217,10 @@ def lookup(key):
 	c = 0
 	for i in key[0]:
 		if c == 0:
-			if i in "AOEU-*": c+=1
+			if i in "AOEU-*": c += 1
 			else: ks += i
 		if c == 1:
-			if not i in "AOEU-*": c+=1
+			if not i in "AOEU-*": c += 1
 			elif i in "AOEU": km += i
 		if c == 2:
 			ke += i
