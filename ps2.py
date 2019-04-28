@@ -202,6 +202,9 @@ ends = {	"PB":"know",
 		"BZ":"say",
 		"BTZ":"say to",
 		"*BTZ":"say the",
+		"PLG":"imagine",
+		"PLGT":"imagine that",
+		"*PLGT":"imagine the",
 		"":""}
 
 def lookup(key):
