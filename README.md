@@ -44,3 +44,5 @@ These ending words can also be combined with other things:
 - `STHA[E/U/EU]`: `that he/you/I`
 - `STPA[E/U/EU]`: `if he/you/I`
 - `SWH[E/U/EU]`: `when he/you/I`
+
+![Visual guide created by Jen (SKWREPB on the Plover discord)](visualguide.png)
